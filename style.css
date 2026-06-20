@@ -140,7 +140,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    cursor: default;
+    cursor: pointer;
     color: var(--text-main);
 }
 

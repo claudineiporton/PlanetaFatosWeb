@@ -380,6 +380,15 @@ document.addEventListener("DOMContentLoaded", () => {
     attachNavEvents(navLinks);
     attachNavEvents(mobileLinks);
 
+    // Make logo click navigate to home-section
+    const logoEl = document.querySelector(".logo");
+    if (logoEl) {
+        logoEl.addEventListener("click", () => {
+            handleNavigation("home-section");
+            history.pushState(null, null, "#home");
+        });
+    }
+
     // Initial load check hash
     const initialHash = window.location.hash;
     if (initialHash) {
