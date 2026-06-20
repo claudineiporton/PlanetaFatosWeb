@@ -398,6 +398,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- INITIALIZE PORTALS & ENGINES ---
     initDecifrador();
     initForum();
+    initArea51();
 });
 
 // --- RENDER DOSSIER CARDS (HOME SECTION) ---
@@ -531,6 +532,47 @@ function initDecifrador() {
         terminalOutput.className = "terminal-output " + statusClass;
         terminalOutput.textContent = text;
     }
+}
+
+// --- PORTAL DE SEGURANÇA DA ÁREA 51 ---
+function initArea51() {
+    const passcode = document.getElementById("area51-passcode");
+    const btnUnlock = document.getElementById("btn-unlock-area51");
+    const output = document.getElementById("area51-output");
+    const lockScreen = document.getElementById("area51-lock-screen");
+    const unlockedScreen = document.getElementById("area51-unlocked");
+
+    if (!btnUnlock) return;
+
+    const unlock = () => {
+        const value = passcode.value.trim().toUpperCase();
+
+        if (!value) {
+            output.textContent = "> ERRO: INSERÇÃO REQUERIDA. DIGITE A CHAVE.";
+            return;
+        }
+
+        output.textContent = "> CONECTANDO AO SERVIDOR SEGURO...\n> VERIFICANDO CHAVE DE CRIPTOGRAFIA...";
+        btnUnlock.disabled = true;
+
+        setTimeout(() => {
+            if (value === "SEGRETO51") {
+                output.textContent = "> CHAVE VÁLIDA. ACESSO CONCEDIDO.";
+                setTimeout(() => {
+                    lockScreen.style.display = "none";
+                    unlockedScreen.style.display = "block";
+                }, 800);
+            } else {
+                output.textContent = "> ERRO: CHAVE INVÁLIDA. ACESSO NEGADO.";
+                btnUnlock.disabled = false;
+            }
+        }, 1200);
+    };
+
+    btnUnlock.addEventListener("click", unlock);
+    passcode.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") unlock();
+    });
 }
 
 // --- QUIZ GAME ENGINE ---

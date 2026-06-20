@@ -35,6 +35,8 @@
             <a href="#decifrador" class="nav-link" data-target="decifrador-section"><i class="fa-solid fa-terminal"></i> Decifrador</a>
             <a href="#quiz" class="nav-link" data-target="quiz-section"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
             <a href="#forum" class="nav-link" data-target="forum-section"><i class="fa-solid fa-comments"></i> Fórum</a>
+            <a href="#biblioteca" class="nav-link" data-target="biblioteca-section"><i class="fa-solid fa-book"></i> Biblioteca</a>
+            <a href="#area51" class="nav-link" data-target="area51-section"><i class="fa-solid fa-lock text-danger"></i> Área 51</a>
         </nav>
         <div class="nav-toggle" id="nav-toggle">
             <i class="fa-solid fa-bars"></i>
@@ -47,6 +49,8 @@
         <a href="#decifrador" class="mobile-link" data-target="decifrador-section"><i class="fa-solid fa-terminal"></i> Decifrador</a>
         <a href="#quiz" class="mobile-link" data-target="quiz-section"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
         <a href="#forum" class="mobile-link" data-target="forum-section"><i class="fa-solid fa-comments"></i> Fórum</a>
+        <a href="#biblioteca" class="mobile-link" data-target="biblioteca-section"><i class="fa-solid fa-book"></i> Biblioteca</a>
+        <a href="#area51" class="mobile-link" data-target="area51-section"><i class="fa-solid fa-lock text-danger"></i> Área 51</a>
     </div>
 
     <!-- Main Container -->
@@ -251,6 +255,122 @@
                     <h3>Mural de Investigações Recentes</h3>
                     <div class="theory-list" id="theory-list">
                         <!-- Loaded from localStorage or defaults -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BIBLIOTECA SECTION ================= -->
+        <section id="biblioteca-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-book text-cyan"></i> Biblioteca do Mistério</h2>
+                <div class="line-decor"></div>
+            </div>
+            <p class="section-intro">Indicações e sugestões de livros, jogos e investigações físicas selecionadas para aprofundar seus conhecimentos. Compras realizadas através do portal ajudam a manter as pesquisas do canal Planeta Fatos ativas!</p>
+            
+            <div class="library-grid">
+                <!-- Book Card 1 -->
+                <div class="library-card">
+                    <div class="library-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('images/dossier_default.png');">
+                        <span class="library-badge">LIVRO // HORROR CÓSMICO</span>
+                    </div>
+                    <div class="library-card-body">
+                        <h3>H.P. Lovecraft - Coleção Completa</h3>
+                        <p>O mestre do terror cósmico e criador do mito de Cthulhu. Descubra os mistérios inexplicáveis descritos nos contos originais em uma edição de colecionador.</p>
+                        <a href="https://www.amazon.com.br/Cole%C3%A7%C3%A3o-H-P-Lovecraft-Exclusivo-Amazon/dp/8525062923" target="_blank" class="btn btn-primary btn-sm btn-block"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
+                    </div>
+                </div>
+                <!-- Book Card 2 -->
+                <div class="library-card">
+                    <div class="library-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('images/dossier_default.png');">
+                        <span class="library-badge">JOGO // INVESTIGAÇÃO</span>
+                    </div>
+                    <div class="library-card-body">
+                        <h3>Mysterium (Jogo de Tabuleiro)</h3>
+                        <p>Um jogador assume o papel do fantasma e os outros são investigadores tentando descobrir quem cometeu o crime e em qual local. O jogo perfeito para fãs do canal!</p>
+                        <a href="https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-MYS001-Mysterium/dp/B076XQW258" target="_blank" class="btn btn-primary btn-sm btn-block"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
+                    </div>
+                </div>
+                <!-- Book Card 3 -->
+                <div class="library-card">
+                    <div class="library-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('images/dossier_default.png');">
+                        <span class="library-badge">LIVRO // SUSPENSE</span>
+                    </div>
+                    <div class="library-card-body">
+                        <h3>O Iluminado (Stephen King)</h3>
+                        <p>A clássica e perturbadora história de Jack Torrance e do assombrado Hotel Overlook. Um suspense psicológico que desafia a mente.</p>
+                        <a href="https://www.amazon.com.br/Iluminado-Stephen-King/dp/8581050127" target="_blank" class="btn btn-primary btn-sm btn-block"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= AREA 51 SECTION ================= -->
+        <section id="area51-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-shield-halved text-danger"></i> Área 51 — Arquivos Restritos</h2>
+                <div class="line-decor"></div>
+            </div>
+            
+            <div class="area51-container">
+                <!-- Locked Terminal Screen -->
+                <div class="terminal-card area51-terminal" id="area51-lock-screen">
+                    <div class="terminal-header error-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                        </div>
+                        <div class="terminal-title">WARNING // ACESSO RESTRITO A MEMBROS</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="security-warning">
+                            <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+                            <h4>ALERTA DE SEGURANÇA</h4>
+                            <p>ESTA PÁGINA CONTÉM DOCUMENTOS E TEORIAS DA CONSPIRAÇÃO CRIPTOGRAFADAS DE ALTO NÍVEL.</p>
+                            <p>Insira a <strong>Chave de Acesso</strong> contida no nosso E-book Oficial <em>"Planeta Fatos: Arquivos Secretos"</em> para descriptografar os arquivos.</p>
+                        </div>
+                        
+                        <div class="form-group area51-input-group">
+                            <span class="terminal-arrow">> </span>
+                            <input type="text" id="area51-passcode" class="terminal-input" placeholder="INSIRA A CHAVE..." autocomplete="off">
+                            <button id="btn-unlock-area51" class="btn btn-terminal btn-danger"><i class="fa-solid fa-key"></i> DESCRIPTOGRAFAR</button>
+                        </div>
+                        <div class="terminal-output text-danger" id="area51-output">
+                            <!-- Password verification feedback -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unlocked Content (hidden initially) -->
+                <div class="area51-unlocked-card" id="area51-unlocked" style="display: none;">
+                    <div class="dossier-header unlocked-header">
+                        <span class="unlocked-badge">ACESSO PERMITIDO</span>
+                        <h3>ARQUIVO SEGRETO AREA 51 // DESBLOQUEADO</h3>
+                    </div>
+                    <div class="dossier-body">
+                        <div class="unlocked-intro">
+                            <p>Parabéns, Investigador! Você descriptografou com sucesso a Área 51. Abaixo estão suas recompensas e conteúdos secretos exclusivos por apoiar o canal.</p>
+                        </div>
+                        
+                        <div class="unlocked-grid">
+                            <!-- Reward item 1 -->
+                            <div class="reward-card">
+                                <i class="fa-solid fa-image reward-icon text-cyan"></i>
+                                <h4>Pack de Wallpapers de IA (4K)</h4>
+                                <p>Papéis de parede premium gerados por inteligência artificial com temas de astronomia, ufologia e mistérios antigos.</p>
+                                <a href="https://drive.google.com/drive/folders/123456789_placeholder" target="_blank" class="btn btn-primary btn-sm"><i class="fa-solid fa-download"></i> Baixar Wallpapers</a>
+                            </div>
+
+                            <!-- Reward item 2 -->
+                            <div class="reward-card">
+                                <i class="fa-solid fa-circle-question reward-icon text-purple"></i>
+                                <h4>Enigma Secreto Extra</h4>
+                                <p>Decifre o código oculto da base militar secreta da Groenlândia. O primeiro a publicar a resposta correta no fórum terá seu canal/nome mencionado em destaque no próximo vídeo!</p>
+                                <div class="enigma-card">
+                                    <p><strong>CÓDIGO CRYPTO:</strong> <code>01000111 01010010 01001111 01000101 01001110 01001100 01000001 01001110 01000100 01001001 01000001 _ 74N, 40W</code></p>
+                                    <p class="text-muted"><em>Dica: O código começa em binário (letra por letra) e termina com coordenadas ocultas de radar satelital.</em></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
