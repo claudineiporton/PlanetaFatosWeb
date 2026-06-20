@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeta Fatos — Desvende o Oculto</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore mistérios inexplicáveis, conspirações históricas, fatos bizarros e decifre enigmas exclusivos no portal oficial do canal Planeta Fatos.">
+    <meta name="keywords" content="mistérios, fatos históricos, enigmas, conspirações, ufologia, casos não solucionados, planeta fatos">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background glow elements -->
+    <div class="glow-bg glow-cyan"></div>
+    <div class="glow-bg glow-purple"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-earth-americas glow-text"></i>
+            <span>PLANETA <span class="accent-text">FATOS</span></span>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="nav-link active" data-target="home-section"><i class="fa-solid fa-house"></i> Início</a>
+            <a href="#decifrador" class="nav-link" data-target="decifrador-section"><i class="fa-solid fa-terminal"></i> Decifrador</a>
+            <a href="#quiz" class="nav-link" data-target="quiz-section"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
+            <a href="#forum" class="nav-link" data-target="forum-section"><i class="fa-solid fa-comments"></i> Fórum</a>
+        </nav>
+        <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#home" class="mobile-link active" data-target="home-section"><i class="fa-solid fa-house"></i> Início</a>
+        <a href="#decifrador" class="mobile-link" data-target="decifrador-section"><i class="fa-solid fa-terminal"></i> Decifrador</a>
+        <a href="#quiz" class="mobile-link" data-target="quiz-section"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
+        <a href="#forum" class="mobile-link" data-target="forum-section"><i class="fa-solid fa-comments"></i> Fórum</a>
+    </div>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        
+        <!-- ================= HOME SECTION ================= -->
+        <section id="home-section" class="content-section active">
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+                <h1 class="hero-title">BEM-VINDO AO <span class="glow-text">OCULTO</span></h1>
+                <p class="hero-subtitle">Desvende os segredos, mistérios e conspirações mais profundos do nosso planeta.</p>
+                <div class="hero-actions">
+                    <a href="#decifrador" class="btn btn-primary" onclick="navigateToSection('decifrador-section')"><i class="fa-solid fa-key"></i> Decifrar Código</a>
+                    <a href="#quiz" class="btn btn-secondary" onclick="navigateToSection('quiz-section')"><i class="fa-solid fa-gamepad"></i> Testar Sobrevivência</a>
+                </div>
+            </div>
+
+            <!-- Section Title -->
+            <div class="section-header">
+                <h2><i class="fa-solid fa-folder-open text-cyan"></i> Dossiês de Mistérios</h2>
+                <div class="line-decor"></div>
+            </div>
+
+            <!-- Dossiê Grid -->
+            <div class="dossier-grid" id="dossier-grid">
+                <!-- JavaScript will populate cards here dynamically -->
+            </div>
+        </section>
+
+        <!-- ================= DECIFRADOR SECTION ================= -->
+        <section id="decifrador-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-key text-purple"></i> Terminal de Decodificação</h2>
+                <div class="line-decor"></div>
+            </div>
+            
+            <div class="decifrador-container">
+                <div class="terminal-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">PLANETA_FATOS // DECRYPT_CORE</div>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-prompt">> INICIANDO SISTEMA DE DESCRIPTAÇÃO...</p>
+                        <p class="terminal-prompt">> SELECIONE O CASO PARA DESBLOQUEAR OS ARQUIVOS SECRETOS:</p>
+                        
+                        <div class="form-group">
+                            <select id="case-select" class="terminal-select">
+                                <option value="" disabled selected>-- SELECIONE O CASO --</option>
+                                <option value="flannan">O Mistério do Farol de Flannan</option>
+                                <option value="nazca">As Linhas de Nazca</option>
+                                <option value="ness">O Enigma do Lago Ness</option>
+                                <option value="hope_diamond">A Maldição do Diamante Hope</option>
+                                <option value="aokigahara">A Floresta Aokigahara</option>
+                                <option value="paris_catacombs">As Catacumbas de Paris</option>
+                                <option value="bermeja">A Ilha Fantasma de Bermeja</option>
+                                <option value="heracleion">A Cidade Submersa de Heracleion</option>
+                                <option value="piri_reis">O Mapa de Piri Reis</option>
+                            </select>
+                        </div>
+                        
+                        <p class="terminal-prompt" id="code-prompt" style="display:none;">> DIGITE A COORDENADA DA CHAVE ESCONDIDA NO VÍDEO (ex: 120, 340):</p>
+                        
+                        <div class="form-group code-input-group" id="input-group" style="display:none;">
+                            <span class="terminal-arrow">> </span>
+                            <input type="text" id="terminal-code" class="terminal-input" placeholder="DIGITE O CÓDIGO DA CHAVE..." autocomplete="off">
+                            <button id="btn-decrypt" class="btn btn-terminal"><i class="fa-solid fa-unlock-keyhole"></i> DECRYPT</button>
+                        </div>
+                        
+                        <div class="terminal-output" id="terminal-output">
+                            <!-- Output results will print here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secret Dossier Result (hidden initially) -->
+                <div class="secret-dossier-card" id="secret-dossier" style="display: none;">
+                    <div class="dossier-header">
+                        <span class="confidential-badge">CONFIDENCIAL</span>
+                        <h3 id="dossier-title">ARQUIVO SECRETO</h3>
+                    </div>
+                    <div class="dossier-body">
+                        <div class="dossier-meta">
+                            <div><strong>STATUS:</strong> <span class="text-green">DESCRIPTOGRAFADO</span></div>
+                            <div><strong>DATA DE COMPILAÇÃO:</strong> <span id="dossier-date">20/06/2026</span></div>
+                        </div>
+                        <div class="dossier-content" id="dossier-content">
+                            <!-- Confidential text details -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= QUIZ SECTION ================= -->
+        <section id="quiz-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-gamepad text-cyan"></i> Centro de Quizzes</h2>
+                <div class="line-decor"></div>
+            </div>
+
+            <div class="quiz-container">
+                <!-- Quiz Selector -->
+                <div class="quiz-selector-card" id="quiz-selector">
+                    <h3>Escolha o seu Teste de Sobrevivência</h3>
+                    <p>Você tem o conhecimento e instinto necessários para sobreviver aos cenários mais assustadores da Terra?</p>
+                    <div class="quiz-grid">
+                        <div class="quiz-card" onclick="startQuiz('cobras')">
+                            <div class="quiz-card-img img-cobras"></div>
+                            <div class="quiz-card-content">
+                                <h4>Você Sobreviveria à Ilha das Cobras?</h4>
+                                <p>5 cobras por metro quadrado e o veneno que derrete carne humana. Faça suas escolhas.</p>
+                                <span class="btn btn-primary btn-sm">Iniciar Teste</span>
+                            </div>
+                        </div>
+                        <div class="quiz-card" onclick="startQuiz('dyatlov')">
+                            <div class="quiz-card-img img-snow"></div>
+                            <div class="quiz-card-content">
+                                <h4>Sobrevivência na Passagem Dyatlov</h4>
+                                <p>Frio extremo e uma força desconhecida na Sibéria. Você tomaria as decisões corretas?</p>
+                                <span class="btn btn-primary btn-sm">Iniciar Teste</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Quiz Card (hidden initially) -->
+                <div class="quiz-game-card" id="quiz-game" style="display: none;">
+                    <div class="quiz-header">
+                        <span id="quiz-title-active">TESTE DE SOBREVIVÊNCIA</span>
+                        <span id="quiz-progress-num">Questão 1/5</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="progress-bar"></div>
+                    </div>
+                    <div class="quiz-body">
+                        <h3 id="quiz-question">Pergunta?</h3>
+                        <div class="quiz-options" id="quiz-options">
+                            <!-- Buttons populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Results Screen (hidden initially) -->
+                <div class="quiz-result-card" id="quiz-result" style="display: none;">
+                    <div class="result-glow"></div>
+                    <i class="fa-solid fa-trophy trophy-icon"></i>
+                    <h3 id="result-headline">Resultado</h3>
+                    <p class="result-score-text">Você acertou <span id="result-score" class="score-highlight">0</span> de <span id="result-total">5</span> questões.</p>
+                    <p id="result-description" class="result-desc">Descrição do seu resultado.</p>
+                    <div class="result-actions">
+                        <button class="btn btn-primary" onclick="restartQuiz()"><i class="fa-solid fa-rotate-left"></i> Tentar Novamente</button>
+                        <button class="btn btn-secondary" onclick="navigateToSection('home-section')"><i class="fa-solid fa-house"></i> Voltar ao Início</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FORUM SECTION ================= -->
+        <section id="forum-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-comments text-purple"></i> Fórum de Teorias Conspiratórias</h2>
+                <div class="line-decor"></div>
+            </div>
+
+            <div class="forum-container">
+                <!-- Theory Form -->
+                <div class="forum-form-card">
+                    <h3>Compartilhe Sua Teoria</h3>
+                    <p>Qual é a sua hipótese sobre os maiores mistérios do mundo? Compartilhe com os outros investigadores do canal.</p>
+                    
+                    <form id="theory-form">
+                        <div class="form-row">
+                            <div class="form-group flex-1">
+                                <label for="form-nick">Investigador (Apelido):</label>
+                                <input type="text" id="form-nick" class="form-control" placeholder="Ex: DetetiveOculto" required>
+                            </div>
+                            <div class="form-group flex-1">
+                                <label for="form-category">Categoria:</label>
+                                <select id="form-category" class="form-control" required>
+                                    <option value="Alienígenas">Alienígenas / OVNIs</option>
+                                    <option value="Casos Antigos">Casos Históricos Não Solucionados</option>
+                                    <option value="Conspirações">Conspirações Governamentais</option>
+                                    <option value="Lendas">Lendas Urbanas / Criptídeos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-text">Sua Teoria:</label>
+                            <textarea id="form-text" class="form-control text-area" rows="4" placeholder="Escreva aqui as provas e detalhes da sua teoria..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Publicar Teoria</button>
+                    </form>
+                </div>
+
+                <!-- Theory List -->
+                <div class="theory-list-container">
+                    <h3>Mural de Investigações Recentes</h3>
+                    <div class="theory-list" id="theory-list">
+                        <!-- Loaded from localStorage or defaults -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for Detailed Dossiê Articles -->
+    <div class="modal" id="dossier-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Título do Dossiê</h3>
+                <span class="modal-close" id="modal-close">&times;</span>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Planeta Fatos. Todos os direitos reservados.</p>
+            <div class="footer-socials">
+                <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
