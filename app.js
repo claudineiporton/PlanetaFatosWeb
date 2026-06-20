@@ -399,6 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initDecifrador();
     initForum();
     initArea51();
+    initVisitorCounter();
 });
 
 // --- RENDER DOSSIER CARDS (HOME SECTION) ---
@@ -573,6 +574,26 @@ function initArea51() {
     passcode.addEventListener("keypress", (e) => {
         if (e.key === "Enter") unlock();
     });
+}
+
+// --- CONTADOR DE VISITAS ELEGANTE ---
+async function initVisitorCounter() {
+    const counterElement = document.getElementById("visitor-count");
+    if (!counterElement) return;
+
+    try {
+        // Incrementa o contador do namespace planetafatos e chave website
+        const response = await fetch("https://api.counterapi.dev/v1/planetafatos/website/up");
+        const data = await response.json();
+        if (data && data.value) {
+            // Formata o número com separador de milhar (ex: 1.250)
+            const formatted = Number(data.value).toLocaleString("pt-BR");
+            counterElement.textContent = `${formatted} investigadores já acessaram o portal`;
+        }
+    } catch (error) {
+        console.error("Erro ao carregar o contador de visitas:", error);
+        counterElement.textContent = "Conexão de sinal estabelecida com o QG";
+    }
 }
 
 // --- QUIZ GAME ENGINE ---

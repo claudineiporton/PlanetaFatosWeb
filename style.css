@@ -1492,3 +1492,34 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* Elegant Live Visitor Badge */
+.visitor-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.72rem;
+    color: var(--text-main);
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #00ff64;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #00ff64;
+    animation: blink-dot 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes blink-dot {
+    0% { opacity: 0.4; }
+    100% { opacity: 1; transform: scale(1.1); }
+}
