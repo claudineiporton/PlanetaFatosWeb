@@ -87,6 +87,48 @@ const dossiers = [
             <p><strong>Expedições:</strong> Sonares avançados detectaram sombras maciças se movendo nas profundezas, e testes recentes de DNA ambiental na água descartaram répteis marinhos gigantes (como plesiossauros), mas apontaram uma quantidade anormalmente alta de DNA de enguias gigantes.</p>
             <p><em>Código do Vídeo para Desbloqueio: <strong>290, 600</strong></em></p>
         `
+    },
+    {
+        id: "paris_catacombs",
+        title: "Os Segredos das Catacumbas de Paris",
+        badge: "MISTÉRIO SUBTERRÂNEO",
+        image: "images/catacombs_intro.png",
+        shortDesc: "O labirinto de túneis que abriga mais de 6 milhões de esqueletos e esconde cinemas clandestinos e desaparecimentos.",
+        readTime: "5 min de leitura",
+        fullContent: `
+            <p><strong>O Dossiê:</strong> No final do século XVIII, para solucionar o grave problema de saúde pública dos cemitérios parisienses superlotados, milhões de restos mortais foram transferidos para as antigas pedreiras de calcário sob a cidade.</p>
+            <p><strong>O Mistério:</strong> O labirinto subterrâneo estende-se por mais de 300 quilômetros. Histórias de desaparecimentos assustam exploradores há décadas (como o corpo de Philibert Aspairt, encontrado anos após se perder). Além disso, em 2004, a polícia descobriu uma sala de cinema clandestina perfeitamente equipada lá embaixo, que desapareceu misteriosamente no dia seguinte.</p>
+            <p><strong>A Descoberta:</strong> Explorações revelam seitas secretas, festas proibidas e anomalias físicas nos túneis mais profundos.</p>
+            <p><em>Código do Vídeo para Desbloqueio: <strong>120, 620</strong></em></p>
+        `
+    },
+    {
+        id: "svalbard",
+        title: "Svalbard: A Cidade Onde Morrer é Proibido",
+        badge: "CURIOSIDADE CIENTÍFICA",
+        image: "images/svalbard_intro.png",
+        shortDesc: "Por que uma pequena cidade na Noruega proibiu sepultamentos e o que está oculto no solo congelado?",
+        readTime: "3 min de leitura",
+        fullContent: `
+            <p><strong>O Dossiê:</strong> Em Longyearbyen, a comunidade mais setentrional do mundo, vigora uma lei bizarra: é ilegal morrer lá. Pessoas doentes ou terminais são transportadas de avião para o continente norueguês.</p>
+            <p><strong>O Mistério:</strong> Devido ao permafrost (solo perpetuamente congelado), os corpos sepultados não entram em decomposição. Isso significa que vírus mortais de epidemias passadas, como a Gripe Espanhola de 1918, permanecem perfeitamente conservados no gelo, ameaçando ressurgir se o solo for perturbado ou descongelar devido ao aquecimento global.</p>
+            <p><strong>A Solução:</strong> A proibição de sepultamentos protege a população de uma potencial catástrofe biológica global.</p>
+            <p><em>Código de Desbloqueio: <strong>svalbard_permafrost</strong></em></p>
+        `
+    },
+    {
+        id: "ellidae",
+        title: "A Casa Mais Isolada do Mundo",
+        badge: "CONSPIRAÇÃO",
+        image: "images/ellidae_intro.png",
+        shortDesc: "Uma misteriosa cabana branca construída no topo de uma ilha desabitada na Islândia. Quem realmente vive lá?",
+        readTime: "3 min de leitura",
+        fullContent: `
+            <p><strong>O Dossiê:</strong> Na desabitada ilha vulcânica de Elliðaey, na Islândia, ergue-se uma solitária casa branca que chama a atenção por sua completa desconexão do resto do mundo.</p>
+            <p><strong>O Mistério:</strong> A cabana gerou dezenas de teorias conspiratórias na internet: que pertencia à cantora Björk, que fora comprada por um bilionário recluso, ou que seria um bunker secreto para sobreviver a um colapso zumbi.</p>
+            <p><strong>A Realidade:</strong> A cabana foi construída em 1953 pela Associação de Caça de Elliðaey para abrigar caçadores de papagaios-do-mar. Apesar de não ter eletricidade ou encanamento, ela possui um sistema de coleta de água de chuva para uma sauna interna alimentada por gerador.</p>
+            <p><em>Código de Desbloqueio: <strong>ellidae_lodge</strong></em></p>
+        `
     }
 ];
 
@@ -189,6 +231,28 @@ const decryptDatabase = {
             <p><strong>Relatório Confidencial da Agência de Mapeamento Hidrográfico da Marinha dos EUA:</strong></p>
             <p>A análise matemática das distorções do mapa de Piri Reis indica que ele foi projetado usando uma projeção equidistante cujo centro magnético fica exatamente sobre o **Cairo, Egito**. Isso indica que os mapas de origem compilados por Reis foram criados a partir de observações feitas no topo da Grande Pirâmide de Gizé.</p>
             <p>Ademais, a costa da Antártida mapeada coincide perfeitamente com os dados sísmicos do relevo rochoso oculto sob a calota de gelo coletados pela expedição sueca-britânica em 1949. O gelo cobre essa rocha há pelo menos 12.000 anos, indicando que as fontes cartográficas originais foram feitas antes da última Era Glacial.</p>
+        `
+    },
+    svalbard: {
+        code: "svalbard_permafrost",
+        title: "ARQUIVO SVALBARD_PERMAFOREST // CONFIDENCIAL",
+        date: "21/06/2026",
+        content: `
+            <p><strong>[DOCUMENTO OFICIAL DESCRIPTOGRAFADO]</strong></p>
+            <p><strong>Relatório Biológico de Svalbard (Instituto de Virologia):</strong></p>
+            <p>Amostras retiradas de tecidos pulmonares de corpos enterrados em 1918 revelaram que o vírus da Influenza (Gripe Espanhola) ainda estava geneticamente viável e ativo dentro das células congeladas.</p>
+            <p>O derretimento do permafrost representa um risco severo de segurança biológica de nível 4, e por isso o monitoramento constante dos cemitérios desativados é operado sob sigilo militar.</p>
+        `
+    },
+    ellidae: {
+        code: "ellidae_lodge",
+        title: "ARQUIVO ELLIDAE_LODGE // SECRETO",
+        date: "21/06/2026",
+        content: `
+            <p><strong>[DOCUMENTO OFICIAL DESCRIPTOGRAFADO]</strong></p>
+            <p><strong>Relatório de Atividades da Associação de Caça de Elliðaey:</strong></p>
+            <p>Embora listada como cabana de caça, registros confidenciais indicam que a cabana foi usada para encontros geopolíticos discretos e monitoramento de tráfego de submarinos soviéticos no Atlântico Norte durante a Guerra Fria.</p>
+            <p>A ilha desabitada fornece a cobertura perfeita de isolamento eletromagnético e acústico necessária para operações de escuta.</p>
         `
     }
 };
