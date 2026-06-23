@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planeta Fatos — Desvende o Oculto</title>
+    <title id="site-title">Planeta Fatos — Desvende o Oculto</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore mistérios inexplicáveis, conspirações históricas, fatos bizarros e decifre enigmas exclusivos no portal oficial do canal Planeta Fatos.">
+    <meta name="description" id="meta-description" content="Explore mistérios inexplicáveis, conspirações históricas, fatos bizarros e decifre enigmas exclusivos no portal oficial do canal Planeta Fatos.">
     <meta name="keywords" content="mistérios, fatos históricos, enigmas, conspirações, ufologia, casos não solucionados, planeta fatos">
     
     <!-- Google Fonts -->
@@ -28,29 +28,38 @@
     <header class="navbar">
         <div class="logo">
             <i class="fa-solid fa-earth-americas glow-text"></i>
-            <span>PLANETA <span class="accent-text">FATOS</span></span>
+            <span id="logo-text">PLANETA <span class="accent-text">FATOS</span></span>
         </div>
         <nav class="nav-links">
-            <a href="#home" class="nav-link active" data-target="home-section"><i class="fa-solid fa-house"></i> Início</a>
-            <a href="#decifrador" class="nav-link" data-target="decifrador-section"><i class="fa-solid fa-terminal"></i> Decifrador</a>
-            <a href="#quiz" class="nav-link" data-target="quiz-section"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
-            <a href="#forum" class="nav-link" data-target="forum-section"><i class="fa-solid fa-comments"></i> Fórum</a>
-            <a href="#biblioteca" class="nav-link" data-target="biblioteca-section"><i class="fa-solid fa-book"></i> Biblioteca</a>
-            <a href="#area51" class="nav-link" data-target="area51-section"><i class="fa-solid fa-lock text-danger"></i> Área 51</a>
+            <a href="#home" class="nav-link active" data-target="home-section" id="nav-home"><i class="fa-solid fa-house"></i> Início</a>
+            <a href="#decifrador" class="nav-link" data-target="decifrador-section" id="nav-decifrador"><i class="fa-solid fa-terminal"></i> Decifrador</a>
+            <a href="#quiz" class="nav-link" data-target="quiz-section" id="nav-quiz"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
+            <a href="#forum" class="nav-link" data-target="forum-section" id="nav-forum"><i class="fa-solid fa-comments"></i> Fórum</a>
+            <a href="#biblioteca" class="nav-link" data-target="biblioteca-section" id="nav-biblioteca"><i class="fa-solid fa-book"></i> Biblioteca</a>
+            <a href="#area51" class="nav-link" data-target="area51-section" id="nav-area51"><i class="fa-solid fa-lock text-danger"></i> Área 51</a>
         </nav>
-        <div class="nav-toggle" id="nav-toggle">
-            <i class="fa-solid fa-bars"></i>
+        <div class="nav-actions">
+            <div class="lang-selector">
+                <select id="lang-select" class="lang-select">
+                    <option value="pt">PT 🇧🇷</option>
+                    <option value="en">EN 🇺🇸</option>
+                    <option value="es">ES 🇪🇸</option>
+                </select>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </header>
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav" id="mobile-nav">
-        <a href="#home" class="mobile-link active" data-target="home-section"><i class="fa-solid fa-house"></i> Início</a>
-        <a href="#decifrador" class="mobile-link" data-target="decifrador-section"><i class="fa-solid fa-terminal"></i> Decifrador</a>
-        <a href="#quiz" class="mobile-link" data-target="quiz-section"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
-        <a href="#forum" class="mobile-link" data-target="forum-section"><i class="fa-solid fa-comments"></i> Fórum</a>
-        <a href="#biblioteca" class="mobile-link" data-target="biblioteca-section"><i class="fa-solid fa-book"></i> Biblioteca</a>
-        <a href="#area51" class="mobile-link" data-target="area51-section"><i class="fa-solid fa-lock text-danger"></i> Área 51</a>
+        <a href="#home" class="mobile-link active" data-target="home-section" id="mobile-home"><i class="fa-solid fa-house"></i> Início</a>
+        <a href="#decifrador" class="mobile-link" data-target="decifrador-section" id="mobile-decifrador"><i class="fa-solid fa-terminal"></i> Decifrador</a>
+        <a href="#quiz" class="mobile-link" data-target="quiz-section" id="mobile-quiz"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
+        <a href="#forum" class="mobile-link" data-target="forum-section" id="mobile-forum"><i class="fa-solid fa-comments"></i> Fórum</a>
+        <a href="#biblioteca" class="mobile-link" data-target="biblioteca-section" id="mobile-biblioteca"><i class="fa-solid fa-book"></i> Biblioteca</a>
+        <a href="#area51" class="mobile-link" data-target="area51-section" id="mobile-area51"><i class="fa-solid fa-lock text-danger"></i> Área 51</a>
     </div>
 
     <!-- Main Container -->
@@ -60,17 +69,17 @@
         <section id="home-section" class="content-section active">
             <!-- Hero Banner -->
             <div class="hero-banner">
-                <h1 class="hero-title">BEM-VINDO AO <span class="glow-text">OCULTO</span></h1>
-                <p class="hero-subtitle">Desvende os segredos, mistérios e conspirações mais profundos do nosso planeta.</p>
+                <h1 class="hero-title" id="hero-title">BEM-VINDO AO <span class="glow-text">OCULTO</span></h1>
+                <p class="hero-subtitle" id="hero-subtitle">Desvende os segredos, mistérios e conspirações mais profundos do nosso planeta.</p>
                 <div class="hero-actions">
-                    <a href="#decifrador" class="btn btn-primary" onclick="navigateToSection('decifrador-section')"><i class="fa-solid fa-key"></i> Decifrar Código</a>
-                    <a href="#quiz" class="btn btn-secondary" onclick="navigateToSection('quiz-section')"><i class="fa-solid fa-gamepad"></i> Testar Sobrevivência</a>
+                    <a href="#decifrador" class="btn btn-primary" id="hero-btn-decrypt" onclick="navigateToSection('decifrador-section')"><i class="fa-solid fa-key"></i> Decifrar Código</a>
+                    <a href="#quiz" class="btn btn-secondary" id="hero-btn-quiz" onclick="navigateToSection('quiz-section')"><i class="fa-solid fa-gamepad"></i> Testar Sobrevivência</a>
                 </div>
             </div>
 
             <!-- Section Title -->
             <div class="section-header">
-                <h2><i class="fa-solid fa-folder-open text-cyan"></i> Dossiês de Mistérios</h2>
+                <h2 id="home-title"><i class="fa-solid fa-folder-open text-cyan"></i> Dossiês de Mistérios</h2>
                 <div class="line-decor"></div>
             </div>
 
@@ -83,7 +92,7 @@
         <!-- ================= DECIFRADOR SECTION ================= -->
         <section id="decifrador-section" class="content-section">
             <div class="section-header">
-                <h2><i class="fa-solid fa-key text-purple"></i> Terminal de Decodificação</h2>
+                <h2 id="decrypt-title"><i class="fa-solid fa-key text-purple"></i> Terminal de Decodificação</h2>
                 <div class="line-decor"></div>
             </div>
             
@@ -95,26 +104,26 @@
                             <span class="dot yellow"></span>
                             <span class="dot green"></span>
                         </div>
-                        <div class="terminal-title">PLANETA_FATOS // DECRYPT_CORE</div>
+                        <div class="terminal-title" id="terminal-header-title">PLANETA_FATOS // DECRYPT_CORE</div>
                     </div>
                     <div class="terminal-body">
-                        <p class="terminal-prompt">> INICIANDO SISTEMA DE DESCRIPTAÇÃO...</p>
-                        <p class="terminal-prompt">> SELECIONE O CASO PARA DESBLOQUEAR OS ARQUIVOS SECRETOS:</p>
+                        <p class="terminal-prompt" id="term-prompt-1">> INICIANDO SISTEMA DE DESCRIPTAÇÃO...</p>
+                        <p class="terminal-prompt" id="term-prompt-2">> SELECIONE O CASO PARA DESBLOQUEAR OS ARQUIVOS SECRETOS:</p>
                         
                         <div class="form-group">
                             <select id="case-select" class="terminal-select">
-                                <option value="" disabled selected>-- SELECIONE O CASO --</option>
-                                <option value="flannan">O Mistério do Farol de Flannan</option>
-                                <option value="nazca">As Linhas de Nazca</option>
-                                <option value="ness">O Enigma do Lago Ness</option>
-                                <option value="hope_diamond">A Maldição do Diamante Hope</option>
-                                <option value="aokigahara">A Floresta Aokigahara</option>
-                                <option value="paris_catacombs">As Catacumbas de Paris</option>
-                                <option value="bermeja">A Ilha Fantasma de Bermeja</option>
-                                <option value="heracleion">A Cidade Submersa de Heracleion</option>
-                                <option value="piri_reis">O Mapa de Piri Reis</option>
-                                <option value="svalbard">Svalbard: A Cidade Onde Morrer é Proibido</option>
-                                <option value="ellidae">Elliðaey: A Casa Mais Isolada do Mundo</option>
+                                <option value="" id="term-select-placeholder" disabled selected>-- SELECIONE O CASO --</option>
+                                <option value="flannan" id="opt-flannan">O Mistério do Farol de Flannan</option>
+                                <option value="nazca" id="opt-nazca">As Linhas de Nazca</option>
+                                <option value="ness" id="opt-ness">O Enigma do Lago Ness</option>
+                                <option value="hope_diamond" id="opt-hope">A Maldição do Diamante Hope</option>
+                                <option value="aokigahara" id="opt-aokigahara">A Floresta Aokigahara</option>
+                                <option value="paris_catacombs" id="opt-catacombs">As Catacumbas de Paris</option>
+                                <option value="bermeja" id="opt-bermeja">A Ilha Fantasma de Bermeja</option>
+                                <option value="heracleion" id="opt-heracleion">A Cidade Submersa de Heracleion</option>
+                                <option value="piri_reis" id="opt-piri-reis">O Mapa de Piri Reis</option>
+                                <option value="svalbard" id="opt-svalbard">Svalbard: A Cidade Onde Morrer é Proibido</option>
+                                <option value="ellidae" id="opt-ellidae">Elliðaey: A Casa Mais Isolada do Mundo</option>
                             </select>
                         </div>
                         
@@ -135,13 +144,13 @@
                 <!-- Secret Dossier Result (hidden initially) -->
                 <div class="secret-dossier-card" id="secret-dossier" style="display: none;">
                     <div class="dossier-header">
-                        <span class="confidential-badge">CONFIDENCIAL</span>
+                        <span class="confidential-badge" id="dossier-badge">CONFIDENCIAL</span>
                         <h3 id="dossier-title">ARQUIVO SECRETO</h3>
                     </div>
                     <div class="dossier-body">
                         <div class="dossier-meta">
-                            <div><strong>STATUS:</strong> <span class="text-green">DESCRIPTOGRAFADO</span></div>
-                            <div><strong>DATA DE COMPILAÇÃO:</strong> <span id="dossier-date">20/06/2026</span></div>
+                            <div id="dossier-status-container"><strong>STATUS:</strong> <span class="text-green" id="dossier-status">DESCRIPTOGRAFADO</span></div>
+                            <div id="dossier-date-container"><strong>DATA DE COMPILAÇÃO:</strong> <span id="dossier-date">20/06/2026</span></div>
                         </div>
                         <div class="dossier-content" id="dossier-content">
                             <!-- Confidential text details -->
@@ -154,30 +163,30 @@
         <!-- ================= QUIZ SECTION ================= -->
         <section id="quiz-section" class="content-section">
             <div class="section-header">
-                <h2><i class="fa-solid fa-gamepad text-cyan"></i> Centro de Quizzes</h2>
+                <h2 id="quiz-title"><i class="fa-solid fa-gamepad text-cyan"></i> Centro de Quizzes</h2>
                 <div class="line-decor"></div>
             </div>
 
             <div class="quiz-container">
                 <!-- Quiz Selector -->
                 <div class="quiz-selector-card" id="quiz-selector">
-                    <h3>Escolha o seu Teste de Sobrevivência</h3>
-                    <p>Você tem o conhecimento e instinto necessários para sobreviver aos cenários mais assustadores da Terra?</p>
+                    <h3 id="quiz-sel-title">Escolha o seu Teste de Sobrevivência</h3>
+                    <p id="quiz-sel-desc">Você tem o conhecimento e instinto necessários para sobreviver aos cenários mais assustadores da Terra?</p>
                     <div class="quiz-grid">
                         <div class="quiz-card" onclick="startQuiz('cobras')">
                             <div class="quiz-card-img img-cobras"></div>
                             <div class="quiz-card-content">
-                                <h4>Você Sobreviveria à Ilha das Cobras?</h4>
-                                <p>5 cobras por metro quadrado e o veneno que derrete carne humana. Faça suas escolhas.</p>
-                                <span class="btn btn-primary btn-sm">Iniciar Teste</span>
+                                <h4 id="quiz-c1-title">Você Sobreviveria à Ilha das Cobras?</h4>
+                                <p id="quiz-c1-desc">5 cobras por metro quadrado e o veneno que derrete carne humana. Faça suas escolhas.</p>
+                                <span class="btn btn-primary btn-sm" id="quiz-c1-btn">Iniciar Teste</span>
                             </div>
                         </div>
                         <div class="quiz-card" onclick="startQuiz('dyatlov')">
                             <div class="quiz-card-img img-snow"></div>
                             <div class="quiz-card-content">
-                                <h4>Sobrevivência na Passagem Dyatlov</h4>
-                                <p>Frio extremo e uma força desconhecida na Sibéria. Você tomaria as decisões corretas?</p>
-                                <span class="btn btn-primary btn-sm">Iniciar Teste</span>
+                                <h4 id="quiz-c2-title">Sobrevivência na Passagem Dyatlov</h4>
+                                <p id="quiz-c2-desc">Frio extremo e uma força desconhecida na Sibéria. Você tomaria as decisões corretas?</p>
+                                <span class="btn btn-primary btn-sm" id="quiz-c2-btn">Iniciar Teste</span>
                             </div>
                         </div>
                     </div>
@@ -205,11 +214,11 @@
                     <div class="result-glow"></div>
                     <i class="fa-solid fa-trophy trophy-icon"></i>
                     <h3 id="result-headline">Resultado</h3>
-                    <p class="result-score-text">Você acertou <span id="result-score" class="score-highlight">0</span> de <span id="result-total">5</span> questões.</p>
+                    <p class="result-score-text" id="result-score-container">Você acertou <span id="result-score" class="score-highlight">0</span> de <span id="result-total">5</span> questões.</p>
                     <p id="result-description" class="result-desc">Descrição do seu resultado.</p>
                     <div class="result-actions">
-                        <button class="btn btn-primary" onclick="restartQuiz()"><i class="fa-solid fa-rotate-left"></i> Tentar Novamente</button>
-                        <button class="btn btn-secondary" onclick="navigateToSection('home-section')"><i class="fa-solid fa-house"></i> Voltar ao Início</button>
+                        <button class="btn btn-primary" id="result-retry-btn" onclick="restartQuiz()"><i class="fa-solid fa-rotate-left"></i> Tentar Novamente</button>
+                        <button class="btn btn-secondary" id="result-back-btn" onclick="navigateToSection('home-section')"><i class="fa-solid fa-house"></i> Voltar ao Início</button>
                     </div>
                 </div>
             </div>
@@ -218,43 +227,43 @@
         <!-- ================= FORUM SECTION ================= -->
         <section id="forum-section" class="content-section">
             <div class="section-header">
-                <h2><i class="fa-solid fa-comments text-purple"></i> Fórum de Teorias Conspiratórias</h2>
+                <h2 id="forum-title"><i class="fa-solid fa-comments text-purple"></i> Fórum de Teorias Conspiratórias</h2>
                 <div class="line-decor"></div>
             </div>
 
             <div class="forum-container">
                 <!-- Theory Form -->
                 <div class="forum-form-card">
-                    <h3>Compartilhe Sua Teoria</h3>
-                    <p>Qual é a sua hipótese sobre os maiores mistérios do mundo? Compartilhe com os outros investigadores do canal.</p>
+                    <h3 id="forum-form-title">Compartilhe Sua Teoria</h3>
+                    <p id="forum-form-desc">Qual é a sua hipótese sobre os maiores mistérios do mundo? Compartilhe com os outros investigadores do canal.</p>
                     
                     <form id="theory-form">
                         <div class="form-row">
                             <div class="form-group flex-1">
-                                <label for="form-nick">Investigador (Apelido):</label>
+                                <label for="form-nick" id="label-nick">Investigador (Apelido):</label>
                                 <input type="text" id="form-nick" class="form-control" placeholder="Ex: DetetiveOculto" required>
                             </div>
                             <div class="form-group flex-1">
-                                <label for="form-category">Categoria:</label>
+                                <label for="form-category" id="label-category">Categoria:</label>
                                 <select id="form-category" class="form-control" required>
-                                    <option value="Alienígenas">Alienígenas / OVNIs</option>
-                                    <option value="Casos Antigos">Casos Históricos Não Solucionados</option>
-                                    <option value="Conspirações">Conspirações Governamentais</option>
-                                    <option value="Lendas">Lendas Urbanas / Criptídeos</option>
+                                    <option value="Alienígenas" id="cat-opt-1">Alienígenas / OVNIs</option>
+                                    <option value="Casos Antigos" id="cat-opt-2">Casos Históricos Não Solucionados</option>
+                                    <option value="Conspirações" id="cat-opt-3">Conspirações Governamentais</option>
+                                    <option value="Lendas" id="cat-opt-4">Lendas Urbanas / Criptídeos</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="form-text">Sua Teoria:</label>
+                            <label for="form-text" id="label-text">Sua Teoria:</label>
                             <textarea id="form-text" class="form-control text-area" rows="4" placeholder="Escreva aqui as provas e detalhes da sua teoria..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Publicar Teoria</button>
+                        <button type="submit" id="forum-submit-btn" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Publicar Teoria</button>
                     </form>
                 </div>
 
                 <!-- Theory List -->
                 <div class="theory-list-container">
-                    <h3>Mural de Investigações Recentes</h3>
+                    <h3 id="forum-list-title">Mural de Investigações Recentes</h3>
                     <div class="theory-list" id="theory-list">
                         <!-- Loaded from localStorage or defaults -->
                     </div>
@@ -265,43 +274,43 @@
         <!-- ================= BIBLIOTECA SECTION ================= -->
         <section id="biblioteca-section" class="content-section">
             <div class="section-header">
-                <h2><i class="fa-solid fa-book text-cyan"></i> Biblioteca do Mistério</h2>
+                <h2 id="library-title"><i class="fa-solid fa-book text-cyan"></i> Biblioteca do Mistério</h2>
                 <div class="line-decor"></div>
             </div>
-            <p class="section-intro">Indicações e sugestões de livros, jogos e investigações físicas selecionadas para aprofundar seus conhecimentos. Compras realizadas através do portal ajudam a manter as pesquisas do canal Planeta Fatos ativas!</p>
+            <p class="section-intro" id="library-intro">Indicações e sugestões de livros, jogos e investigações físicas selecionadas para aprofundar seus conhecimentos. Compras realizadas através do portal ajudam a manter as pesquisas do canal Planeta Fatos ativas!</p>
             
             <div class="library-grid">
                 <!-- Book Card 1 -->
                 <div class="library-card">
                     <div class="library-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('images/dossier_default.png');">
-                        <span class="library-badge">LIVRO // HORROR CÓSMICO</span>
+                        <span class="library-badge" id="lib-c1-badge">LIVRO // HORROR CÓSMICO</span>
                     </div>
                     <div class="library-card-body">
-                        <h3>H.P. Lovecraft - Coleção Completa</h3>
-                        <p>O mestre do terror cósmico e criador do mito de Cthulhu. Descubra os mistérios inexplicáveis descritos nos contos originais em uma edição de colecionador.</p>
-                        <a href="https://www.amazon.com.br/s?k=box+H.P.+Lovecraft&tag=planetafatosw-20" target="_blank" class="btn btn-primary btn-sm btn-block"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
+                        <h3 id="lib-c1-title">H.P. Lovecraft - Coleção Completa</h3>
+                        <p id="lib-c1-desc">O mestre do terror cósmico e criador do mito de Cthulhu. Descubra os mistérios inexplicáveis descritos nos contos originais em uma edição de colecionador.</p>
+                        <a href="https://www.amazon.com.br/s?k=box+H.P.+Lovecraft&tag=planetafatosw-20" target="_blank" class="btn btn-primary btn-sm btn-block" id="lib-c1-btn"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
                     </div>
                 </div>
                 <!-- Book Card 2 -->
                 <div class="library-card">
                     <div class="library-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('images/dossier_default.png');">
-                        <span class="library-badge">JOGO // INVESTIGAÇÃO</span>
+                        <span class="library-badge" id="lib-c2-badge">JOGO // INVESTIGAÇÃO</span>
                     </div>
                     <div class="library-card-body">
-                        <h3>Mysterium (Jogo de Tabuleiro)</h3>
-                        <p>Um jogador assume o papel do fantasma e os outros são investigadores tentando descobrir quem cometeu o crime e em qual local. O jogo perfeito para fãs do canal!</p>
-                        <a href="https://www.amazon.com.br/s?k=Mysterium+Galapagos+jogo&tag=planetafatosw-20" target="_blank" class="btn btn-primary btn-sm btn-block"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
+                        <h3 id="lib-c2-title">Mysterium (Jogo de Tabuleiro)</h3>
+                        <p id="lib-c2-desc">Um jogador assume o papel do fantasma e os outros são investigadores tentando descobrir quem cometeu o crime e em qual local. O jogo perfeito para fãs do canal!</p>
+                        <a href="https://www.amazon.com.br/s?k=Mysterium+Galapagos+jogo&tag=planetafatosw-20" target="_blank" class="btn btn-primary btn-sm btn-block" id="lib-c2-btn"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
                     </div>
                 </div>
                 <!-- Book Card 3 -->
                 <div class="library-card">
                     <div class="library-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('images/dossier_default.png');">
-                        <span class="library-badge">LIVRO // SUSPENSE</span>
+                        <span class="library-badge" id="lib-c3-badge">LIVRO // SUSPENSE</span>
                     </div>
                     <div class="library-card-body">
-                        <h3>O Iluminado (Stephen King)</h3>
-                        <p>A clássica e perturbadora história de Jack Torrance e do assombrado Hotel Overlook. Um suspense psicológico que desafia a mente.</p>
-                        <a href="https://www.amazon.com.br/s?k=O+Iluminado+Stephen+King+Suma&tag=planetafatosw-20" target="_blank" class="btn btn-primary btn-sm btn-block"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
+                        <h3 id="lib-c3-title">O Iluminado (Stephen King)</h3>
+                        <p id="lib-c3-desc">A clássica e perturbadora história de Jack Torrance e do assombrado Hotel Overlook. Um suspense psicológico que desafia a mente.</p>
+                        <a href="https://www.amazon.com.br/s?k=O+Iluminado+Stephen+King+Suma&tag=planetafatosw-20" target="_blank" class="btn btn-primary btn-sm btn-block" id="lib-c3-btn"><i class="fa-brands fa-amazon"></i> Ver na Amazon</a>
                     </div>
                 </div>
             </div>
@@ -310,7 +319,7 @@
         <!-- ================= AREA 51 SECTION ================= -->
         <section id="area51-section" class="content-section">
             <div class="section-header">
-                <h2><i class="fa-solid fa-shield-halved text-danger"></i> Área 51 — Arquivos Restritos</h2>
+                <h2 id="area51-title"><i class="fa-solid fa-shield-halved text-danger"></i> Área 51 — Arquivos Restritos</h2>
                 <div class="line-decor"></div>
             </div>
             
@@ -321,14 +330,14 @@
                         <div class="terminal-dots">
                             <span class="dot red"></span>
                         </div>
-                        <div class="terminal-title">WARNING // ACESSO RESTRITO A MEMBROS</div>
+                        <div class="terminal-title" id="area51-term-title">WARNING // ACESSO RESTRITO A MEMBROS</div>
                     </div>
                     <div class="terminal-body">
                         <div class="security-warning">
                             <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
-                            <h4>ALERTA DE SEGURANÇA</h4>
-                            <p>ESTA PÁGINA CONTÉM DOCUMENTOS E TEORIAS DA CONSPIRAÇÃO CRIPTOGRAFADAS DE ALTO NÍVEL.</p>
-                            <p>Insira a <strong>Chave de Acesso</strong> contida no nosso E-book Oficial <em>"Planeta Fatos: Arquivos Secretos"</em> para descriptografar os arquivos.</p>
+                            <h4 id="area51-warn-title">ALERTA DE SEGURANÇA</h4>
+                            <p id="area51-warn-p1">ESTA PÁGINA CONTÉM DOCUMENTOS E TEORIAS DA CONSPIRAÇÃO CRIPTOGRAFADAS DE ALTO NÍVEL.</p>
+                            <p id="area51-warn-p2">Insira a <strong>Chave de Acesso</strong> contida no nosso E-book Oficial <em>"Planeta Fatos: Arquivos Secretos"</em> para descriptografar os arquivos.</p>
                         </div>
                         
                         <div class="form-group area51-input-group">
@@ -345,31 +354,31 @@
                 <!-- Unlocked Content (hidden initially) -->
                 <div class="area51-unlocked-card" id="area51-unlocked" style="display: none;">
                     <div class="dossier-header unlocked-header">
-                        <span class="unlocked-badge">ACESSO PERMITIDO</span>
-                        <h3>ARQUIVO SEGRETO AREA 51 // DESBLOQUEADO</h3>
+                        <span class="unlocked-badge" id="area51-unl-badge">ACESSO PERMITIDO</span>
+                        <h3 id="area51-unl-title">ARQUIVO SEGRETO AREA 51 // DESBLOQUEADO</h3>
                     </div>
                     <div class="dossier-body">
                         <div class="unlocked-intro">
-                            <p>Parabéns, Investigador! Você descriptografou com sucesso a Área 51. Abaixo estão suas recompensas e conteúdos secretos exclusivos por apoiar o canal.</p>
+                            <p id="area51-unl-intro">Parabéns, Investigador! Você descriptografou com sucesso a Área 51. Abaixo estão suas recompensas e conteúdos secretos exclusivos por apoiar o canal.</p>
                         </div>
                         
                         <div class="unlocked-grid">
                             <!-- Reward item 1 -->
                             <div class="reward-card">
                                 <i class="fa-solid fa-image reward-icon text-cyan"></i>
-                                <h4>Pack de Wallpapers de IA (4K)</h4>
-                                <p>Papéis de parede premium gerados por inteligência artificial com temas de astronomia, ufologia e mistérios antigos.</p>
-                                <a href="https://drive.google.com/drive/folders/123456789_placeholder" target="_blank" class="btn btn-primary btn-sm"><i class="fa-solid fa-download"></i> Baixar Wallpapers</a>
+                                <h4 id="area51-r1-title">Pack de Wallpapers de IA (4K)</h4>
+                                <p id="area51-r1-p">Papéis de parede premium gerados por inteligência artificial com temas de astronomia, ufologia e mistérios antigos.</p>
+                                <a href="https://drive.google.com/drive/folders/123456789_placeholder" target="_blank" class="btn btn-primary btn-sm" id="area51-r1-btn"><i class="fa-solid fa-download"></i> Baixar Wallpapers</a>
                             </div>
 
                             <!-- Reward item 2 -->
                             <div class="reward-card">
                                 <i class="fa-solid fa-circle-question reward-icon text-purple"></i>
-                                <h4>Enigma Secreto Extra</h4>
-                                <p>Decifre o código oculto da base militar secreta da Groenlândia. O primeiro a publicar a resposta correta no fórum terá seu canal/nome mencionado em destaque no próximo vídeo!</p>
+                                <h4 id="area51-r2-title">Enigma Secreto Extra</h4>
+                                <p id="area51-r2-p">Decifre o código oculto da base militar secreta da Groenlândia. O primeiro a publicar a resposta correta no fórum terá seu canal/nome mencionado em destaque no próximo vídeo!</p>
                                 <div class="enigma-card">
-                                    <p><strong>CÓDIGO CRYPTO:</strong> <code>01000111 01010010 01001111 01000101 01001110 01001100 01000001 01001110 01000100 01001001 01000001 _ 74N, 40W</code></p>
-                                    <p class="text-muted"><em>Dica: O código começa em binário (letra por letra) e termina com coordenadas ocultas de radar satelital.</em></p>
+                                    <p><strong id="area51-r2-strong">CÓDIGO CRYPTO:</strong> <code>01000111 01010010 01001111 01000101 01001110 01001100 01000001 01001110 01000100 01001001 01000001 _ 74N, 40W</code></p>
+                                    <p class="text-muted" id="area51-r2-tip">Dica: O código começa em binário (letra por letra) e termina com coordenadas ocultas de radar satelital.</p>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +406,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-left">
-                <p>&copy; 2026 Planeta Fatos. Todos os direitos reservados.</p>
+                <p id="footer-copy">&copy; 2026 Planeta Fatos. Todos os direitos reservados.</p>
             </div>
             
             <!-- Elegant Live Counter Badge -->
